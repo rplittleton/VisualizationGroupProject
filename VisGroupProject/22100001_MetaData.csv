@@ -1,0 +1,141 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Cyber security measures in place by industry and enterprise size",22100001,,"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2210000101",1,"CURRENT - a cube available to the public and that is current",Occasional,2017-01-01,2017-01-01,4
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+1,Geography,,
+2,"Cyber security measures",,
+3,"North American Industry Classification System (NAICS)",,
+4,"Size of enterprise",,
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+1,Canada,[11124],1,,,,
+2,"Mobile security (management of personally-owned devices, secure remote access, virtual private network (VPN))",,1,,,,
+2,"Anti-malware software to protect against viruses, spyware, ransomware, et cetera (Microsoft Security Essentials, Malwarebytes, Symantec Endpoint Protection)",,2,,,,
+2,"Web security (digital certificates, website restrictions)",,3,,,,
+2,"Email security (spam filters, email scans)",,4,,,,
+2,"Network security (firewalls, proxy servers, honeypot systems)",,5,,,,
+2,"Data protection and control (encryption, rights management)",,6,,,,
+2,"Point-Of-Sale (POS) security (encryption of cardholder data)",,7,,,,
+2,"Software and application security (application whitelisting, scheduled patching)",,8,,,,
+2,"Hardware and asset management (inventory of information technology (IT) equipment, encrypted universal serial bus (USB) storage devices)",,9,,,,
+2,"Identity and access management (password complexity rules, restrictions based on user accounts)",,10,,,,
+2,"Physical access controls (keypad access control systems, identity badges)",,11,,,,
+2,"Business does not have any cyber security measures in place",,12,,,,
+2,"Business does not know",,13,,,,
+3,"Private sector",,1,,,,
+3,"Agriculture, forestry, fishing and hunting",[11],2,1,,2,
+3,"Mining, quarrying, and oil and gas extraction",[21],3,1,,,
+3,"Oil and gas extraction",[211],4,3,,,
+3,"Mining and quarrying (except oil and gas)",[212],5,3,,,
+3,"Support activities for mining, and oil and gas extraction",[213],6,3,,,
+3,Utilities,[22],7,1,,,
+3,"Electric Power Generation, Transmission and Distribution",[2211],8,7,,,
+3,"Natural gas distribution",[2212],9,7,,,
+3,"Water, sewage and other systems",[2213],10,7,,,
+3,Construction,[23],11,1,,3,
+3,Manufacturing,[31-33],12,1,,,
+3,"Wholesale trade",[41],13,1,,,
+3,"Retail trade",[44-45],14,1,,,
+3,"Motor vehicle and parts dealers",[441],15,14,,,
+3,"Furniture and home furnishings stores",[442],16,14,,,
+3,"Electronics and appliance stores",[443],17,14,,,
+3,"Building material and garden equipment and supplies dealers",[444],18,14,,,
+3,"Food and beverage stores",[445],19,14,,,
+3,"Health and personal care stores",[446],20,14,,,
+3,"Gasoline stations",[447],21,14,,,
+3,"Clothing and clothing accessories stores",[448],22,14,,,
+3,"Sporting goods, hobby, book and music stores",[451],23,14,,,
+3,"General merchandise stores",[452],24,14,,,
+3,"Miscellaneous store retailers",[453],25,14,,,
+3,"Non-store retailers",[454],26,14,,,
+3,"Transportation and warehousing",[48-49],27,1,,,
+3,"Air transportation",[481],28,27,,,
+3,"Rail transportation",[482],29,27,,,
+3,"Water transportation",[483],30,27,,,
+3,"Truck transportation",[484],31,27,,,
+3,"Transit and ground passenger transportation",[485],32,27,,,
+3,"Pipeline transportation",[486],33,27,,,
+3,"Scenic and sightseeing transportation",[487],34,27,,,
+3,"Support activities for transportation",[488],35,27,,,
+3,"Postal service",[491],36,27,,,
+3,"Couriers and messengers",[492],37,27,,,
+3,"Warehousing and storage",[493],38,27,,,
+3,"Information and cultural industries",[51],39,1,,,
+3,"Publishing industries",[511],40,39,,,
+3,"Motion picture and sound recording industries",[512],41,39,,,
+3,Broadcasting,[515],42,39,,,
+3,Telecommunications,[517],43,39,,,
+3,"Internet service providers, web search portals, and data processing services",[518],44,39,,,
+3,"Other information services",[519],45,39,,,
+3,"Finance and insurance",[52],46,1,,,
+3,"Monetary authorities-central bank and credit intermediation and related activitivies",,47,46,,4,
+3,"Securities, commodity contracts, and other financial investment and related activities",[523],48,46,,,
+3,"Insurance carriers and related activities",[524],49,46,,,
+3,"Funds and other financial vehicles",[526],50,46,,,
+3,"Real estate and rental and leasing",[53],51,1,,,
+3,"Professional, scientific and technical services",[54],52,1,,,
+3,"Legal services",[5411],53,52,,,
+3,"Accounting, tax preparation, bookkeeping and payroll services",[5412],54,52,,,
+3,"Architectural, engineering and related services",[5413],55,52,,,
+3,"Specialized design services",[5414],56,52,,,
+3,"Computer systems design and related services",[5415],57,52,,,
+3,"Management, scientific and technical consulting services",[5416],58,52,,,
+3,"Scientific research and development services",[5417],59,52,,,
+3,"Advertising and related services",[5418],60,52,,,
+3,"Other professional, scientific and technical services",[5419],61,52,,,
+3,"Management of companies and enterprises",[55],62,1,,5,
+3,"Administrative and support, waste management and remediation services",[56],63,1,,,
+3,"Educational services",[61],64,1,,,
+3,"Elementary and secondary schools",[6111],65,64,,,
+3,"Community colleges and C.E.G.E.P.s",[6112],66,64,,,
+3,Universities,[6113],67,64,,,
+3,"Business schools and computer and management training",[6114],68,64,,,
+3,"Technical and trade schools",[6115],69,64,,,
+3,"Other schools and instruction",[6116],70,64,,,
+3,"Educational support services",[6117],71,64,,,
+3,"Health care and social assistance",[62],72,1,,,
+3,"Ambulatory health care services",[621],73,72,,,
+3,Hospitals,[622],74,72,,,
+3,"Nursing and residential care facilities",[623],75,72,,,
+3,"Social assistance",[624],76,72,,,
+3,"Arts, entertainment and recreation",[71],77,1,,,
+3,"Accommodation and food services",[72],78,1,,,
+3,"Other services (except public administration)",[81],79,1,,6,
+4,"Total, all enterprises",,1,,,,
+4,"Small enterprises (10 to 49 employees)",,2,1,,,
+4,"Medium-sized enterprises (50 to 249 employees)",,3,1,,,
+4,"Large enterprises (250 and more employees)",,4,1,,,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period",..
+"less than the limit of detection",<LOD
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded",0s
+"data quality: excellent",A
+"data quality: very good",B
+"data quality: good",C
+"data quality: acceptable",D
+"use with caution",E
+"too unreliable to be published.",F
+"not applicable",...
+preliminary,p
+revised,r
+"suppressed to meet the confidentiality requirements of the Statistics Act",x
+terminated,t
+
+"Survey Code","Survey Name"
+5244,"Canadian Survey of Cyber Security and Cybercrime"
+
+"Subject Code","Subject Name"
+22,"Information and communications technology "
+
+"Note ID",Note
+1,"Data quality indicators are based on the standard error (SE) and the imputation rates. Quality indicators indicate the following: A is very reliable; B is reliable; C is good; D is acceptable; E is use with caution; and F is too unreliable to be published."
+2,"Includes North American Industry Classification System (NAICS) codes 113 and 11531."
+3,"North American Industry Classification System (NAICS) code 23 excludes code 238."
+4,"Includes North American Industry Classification System (NAICS) codes 521 and 522."
+5,"North American Industry Classification System (NAICS) code 55 excludes code 551114."
+6,"North American Industry Classification System (NAICS) code 81 excludes code 814."
+
+"Correction ID","Correction Date","Correction Note"
+

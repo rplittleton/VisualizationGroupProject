@@ -1,0 +1,71 @@
+"Each Source Dataset Provides Several Related Variables – as the variables within set are each related, they will be coded with a prefix in the variable names. Provided here is a table of the long form names of the variables, as they have been appreviated for legibility",
+"Variables in original datasets that are redundant across all datasets, such as location: canada, are omitted in this table, and the grouping variables included are industry and enterprise size",
+,
+Prefixes are as follows:,
+Prefix,Dataset
+A:,Frequency of cyber security incidents experienced by industry and enterprise size
+B:,Cyber security measures in place by industry and enterprise size
+C:,Cyber security incidents experienced by industry and enterprise size
+D:,Impacts of cyber security incidents by industry and enterprise size
+E:,Cyber security incidents reported to a police service by industry and enterprise size
+F:,Main reasons for spending time or money on cyber security measures and/or related skills training by industry and enterprise size
+,
+Variable Names are as follows:,
+Variable Name,Full Original Name
+A1: Disrupt or Deface,Number of times incident(s) to disrupt or deface the business or web presence occurred
+A2: Steal Information,Number of times incident(s)  to steal personal or financial information occurred
+A3: Steal Money,Number of times incident(s)  to steal money or demand ransom payment occurred
+A4: Steal Intellectual Property,Number of times incident(s)  to steal or manipulate intellectual property or business data occurred
+A5: Access Unauthorized Area,Number of times incident(s)  to access unauthorised or privileged areas occurred
+A6: Monitor and Track Activity,Number of times incident(s) to monitor and track business activity occurred
+A7: Unknown Motive,Number of times incident(s) with an unknown motive occurred
+,
+B1: Mobile Security,"Mobile security (management of personally-owned devices, secure remote access, virtual private network (VPN))"
+B2: Anti Malware,"Anti-malware software to protect against viruses, spyware, ransomware, et cetera (Microsoft Security Essentials, Malwarebytes, Symantec Endpoint Protection)"
+B3: Web Security,"Web security (digital certificates, website restrictions)"
+B4: Email Security,"Email security (spam filters, email scans)"
+B5: Network Security,"Network security (firewalls, proxy servers, honeypot systems)"
+B6: Data Protection,"Data protection and control (encryption, rights management)"
+B7: POS Security,Point-Of-Sale (POS) security (encryption of cardholder data)
+B8: Software Security,"Software and application security (application whitelisting, scheduled patching)"
+B9: Hardware Management,"Hardware and asset management (inventory of information technology (IT) equipment, encrypted universal serial bus (USB) storage devices)"
+B10: Identity and Access Management,"Identity and access management (password complexity rules, restrictions based on user accounts)"
+B11: Physical Access Controls,"Physical access controls (keypad access control systems, identity badges)"
+B12: No Measures,Business does not have any cyber security measures in place
+B13: Unknown,Business does not know
+,
+C1: Business was Impacted,Business was impacted by cyber security incident(s)
+C2: Disrupt or Deface,Incident(s) to disrupt or deface the business or web presence
+C3: Steal Information,Incident(s) to steal personal or financial information
+C4: Steal Money,Incident(s) to steal money or demand ransom payment
+C5: Steal Intellectual Property,Incident(s) to steal or manipulate intellectual property or business data
+C6: Access Unauthorized Areas,Incident(s) to access unauthorised or privileged areas
+C7: Monitor and Track activity,Incident(s) to monitor and track business activity
+C8: Unknown Motive,Incident(s) with an unknown motive
+C9: Business not impacted,Business was not impacted by any cyber security incident(s)
+,
+D1: Loss of revenue,Loss of revenue
+"D2: Loss of suppliers, customers, or partners","Loss of suppliers, customers, or partners"
+D3: Additional repair or recovery costs,Additional repair or recovery costs
+D4: Paid ransom payment,Paid ransom payment
+"D5: Prevented the use of resources or services (desktop, email)","Prevented the use of resources or services (desktop, email)"
+D6: Prevented employees from carrying out day-to-day work,Prevented employees from carrying out day-to-day work
+D7: Additional time required by employees to respond to the cyber security incident(s),Additional time required by employees to respond to the cyber security incident(s)
+D8: Damage to the reputation of the business,Damage to the reputation of the business
+D9: Fines from regulators or authorities,Fines from regulators or authorities
+D10: Discouraged business from carrying out a future activity that was planned,Discouraged business from carrying out a future activity that was planned
+D11: Minor incident(s) impact was minimal to the business,Minor incident(s) impact was minimal to the business
+D12: Business was not impacted in any of the ways described,Business was not impacted in any of the ways described
+D13: Do not know or do not know the full extent of the impact,Do not know or do not know the full extent of the impact
+,
+E1: Incidents Reported to Police,Enterprises reporting cyber security incidents to a police service
+,
+F1: Protect Reputation,Protect the reputation of the business
+F2: Protect personal information,"Protect personal information of employees, suppliers, customers or partners"
+F3: Protect trade secrets,Protect trade secrets and intellectual property
+F4: Compliance with laws,"Compliance with laws, regulations, or contracts"
+F5: Past Incidents,Business has suffered a cyber security incident previously
+F6: Past Downtime,Prevent downtime and outages
+F7: Prevent Fraud,Prevent fraud and theft
+F8: Secure Continuity of Operations,Secure continuity of business operations
+F9: Business Does not spend money on security,Business does not spend time or money on cyber security measures and/or related skills training
