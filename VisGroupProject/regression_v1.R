@@ -81,16 +81,66 @@ anova(mod.measures_impacts_q1, test="Chisq")
 
 #Visual for model 1:
 mod.measures_impacts_q1.plot <- ggplot(train_mi, aes(Percent,Cybersecurity.Measures, color=Impact.Type)) +
-  stat_smooth(method="glm", method.args = list(family = binomial("logit"), maxit = 100), formula=Cybersecurity.Measures ~.,
-              alpha=0.2, size=2, aes(fill=Impact.Type)) +
+  #stat_smooth(method="glm", method.args = list(family = binomial("logit"), maxit = 100), formula=Cybersecurity.Measures ~.,
+              #alpha=0.2, size=2, aes(fill=Impact.Type)) 
+  ggtitle("Percent of Cybersecurity Measures Invested Resulting From Cyber Impact") + 
   geom_point(position=position_jitter(height=0.03, width=0)) +
-  xlab("Percent") + ylab("Cybersecurity.Measures") 
+  xlab("Percent") + ylab("Cybersecurity.Measures") + theme_linedraw()
   #+ theme(axis.text.x = element_text(angle = 45))
-mod.measures_impacts_q1.plot 
+plot1 <- ggplotly(mod.measures_impacts_q1.plot)
+
+#train_mi1_1 <- train_mi %>% filter(Org.Size == 'Small enterprises (10 to 49 employees)')
+mod.measures_impacts_q1_1.plot <- ggplot(train_mi1_1, aes(Percent,Cybersecurity.Measures, color=Impact.Type)) +
+  #stat_smooth(method="glm", method.args = list(family = binomial("logit"), maxit = 100), formula=Cybersecurity.Measures ~.,
+  #alpha=0.2, size=2, aes(fill=Impact.Type)) 
+  ggtitle("Small Size Firms - Percent of Cybersecurity Measures Invested Resulting From Cyber Impact") + 
+  geom_point(position=position_jitter(height=0.03, width=0)) +
+  xlab("Percent") + ylab("Cybersecurity.Measures") + theme_linedraw()
+#+ theme(axis.text.x = element_text(angle = 45))
+plot1 <- ggplotly(mod.measures_impacts_q1.plot)
+
+#Visual for model 2:
+train_mi2 <- train_mi[complete.cases(train_mi), ]
+mod.measures_impacts_q2.plot <- ggplot(train_mi2, aes(Cybersecurity.Measures,Impact.Type)) +
+  geom_point(alpha=.5) +
+  geom_smooth(method="glm", data = train_mi2, method.args = list(family = binomial("logit")), formula = Cybersecurity.Measures ~ Impact.Type) + 
+  xlab("Cybersecurity.Measures") + ylab("Impact.Type") + ggtitle("Cybersecurity Measures by Impact Type Model") + 
+  #theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(angle = 45))
+  theme_linedraw() + theme(axis.text.x = element_text(angle = 45,hjust = 1))
+  #geom_jitter(height = 0.05)
+  #geom_point(position=position_jitter(height=0.03, width=0)) +
+mod.measures_impacts_q2.plot
 
 #For example, we see that investing in network security and anti-malware is a viable
 #proposition to mitigate against the impact of reduced employee productivity and
 #loss of customer trust
-
 #Next steps: test new models and visuals, account for subset data (i.e. compare Total, all enterprises vs specific org type)
+
+#Visual for model 2:
+vx <- sqldf('select "Industry", "Incident.Type", "Investing.Reasons",round(avg("Percent"),2) as "Percent" from incidents_reasons group by "Industry","Incident.Type", "Investing.Reasons" order by "Percent" DESC')
+#vxx <- vx %>% filter(Industry == "Professional, scientific and technical services [54]")
+plotel3 <- ggplot(vx,aes(reorder(Investing.Reasons, -Percent),Percent)) + 
+  geom_bar(stat = "summary", fun.y = "mean", width=0.1,position = position_dodge(width = 0.2), aes(fill = Incident.Type)) + 
+  theme(panel.background = element_blank(),aspect.ratio = 2/1) + 
+  theme(axis.text.x = element_text(angle = 90,hjust = 0.5)) +
+  xlab("Reasons To Invest (Investing.Reasons) ") + ylab("Average Percent of Organizations Invested") + ggtitle("Cybersecurity Investment Percentage by Investment Reason") + coord_flip()
+
+#mod.measures_impacts_q3.plot <-  ggplot(incidents_reasons, aes(Incident.Type,Investing.Reasons, fill = Percent)) +
+#  geom_bar(stat="identity") + 
+#  stat_smooth(method="glm", data = incidents_reasons, method.args = list(family = binomial("logit")), formula = as.factor(incidents_reasons$Org.Size), as.factor(incidents_reasons$Investing.Reasons)) + 
+#  xlab("Incident.Type") + ylab("Impact.Type") + ggtitle("Cybersecurity Measures by Impact Type Model") + 
+#  #theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(angle = 45))
+#  theme_linedraw() + theme(axis.text.x = element_text(angle = 45,hjust = 0.8))
+
+#Sys.setenv("plotly_username"="jeching")
+#Sys.setenv("plotly_api_key"="#####") #Removed for privacy
+
+plot1 <- ggplotly(mod.measures_impacts_q1.plot) %>% layout(showlegend = FALSE)
+api_create(plot1, filename = "Percent-Cybersecurity-Measures-By-Impact-Type")
+  
+plot2 <- ggplotly(mod.measures_impacts_q2.plot ) %>% layout(showlegend = FALSE)
+api_create(plot2, filename = "Cybersecurity-Measures-by-Impact-Type-Model")
+
+plot3 <- ggplotly(plotel3  )
+api_create(plot3, filename = "Average-Percent-of-Organizations-Invested")
 
