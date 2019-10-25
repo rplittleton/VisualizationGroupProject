@@ -1,0 +1,20 @@
+Data Visualization as a Tool for Development of Information Security Systems
+
+
+Jeffrey Ching
+Ryan Littleton
+Joseph Nguyen
+
+This repository contains a system for the visualization of data from Open Canada relating to cybersecurity, divided by industry and enterprise size (Open Canada, 2018). Within the repository, all original datasets, cleaned and merged datasets as well as R code relating to managing them and generating predictive algoritm results are located in the VisGroupProject directory. Static visualizations generated for this project and R code relating to its generation are located in the Data Visual Directory. Included below is a link to a plot.ly dashboard, also generated in R code that contains interactive visualizations for this system.
+
+
+Data Source
+
+Open Canada. (2018). Cyber security incidents experienced
+by industry and enterprise size.csv [Data file] Available from Open
+Canada site: https://open.canada.ca/data/en/dataset/4d37d5a3-cd2d-
+4564-ab83-73bc50b
+
+Dashboard Link
+
+https://plot.ly/~jeching/9/information-security-system-investment-model-visualization-dashboard/
